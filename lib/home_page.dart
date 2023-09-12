@@ -38,8 +38,8 @@ class _HomePageState extends State<HomePage> {
         actions: [
           Row(
             children: [
-              TextBttn(bttnName: "Home", bttnPage: DummyPage()),
-              TextBttn(bttnName: "Contact Me", bttnPage: DummyPage()),
+              TextBttn(bttnName: "Home", bttnPage: HomePage()),
+              TextBttn(bttnName: "Contact Me", bttnPage: HomePage()),
               TextBttn(bttnName: "About Me", bttnPage: DummyPage()),
 
             ],

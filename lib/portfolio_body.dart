@@ -6,7 +6,7 @@ class BodyPart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Color backColor=Colors.black54;
-    Color txtcolor = Colors.orange;
+    Color txtcolor = Colors.white70;
     double scrnHeight=MediaQuery.of(context).size.height;
     double scrnWidth=MediaQuery.of(context).size.width;
     return Container(
@@ -19,7 +19,7 @@ class BodyPart extends StatelessWidget {
           Column(
             children: [
               Padding(
-                padding: EdgeInsets.only(top:scrnHeight*.09,left: scrnWidth*.09),
+                padding: EdgeInsets.only(top:scrnHeight*.09),
                 child: RichText(
                   text: TextSpan(
                       text: "WELCOME TO MY PORTFOLIO !",
@@ -57,13 +57,26 @@ class BodyPart extends StatelessWidget {
                       ]),
                 ),
               ),
+              SizedBox(
+                width: scrnWidth*.4,
+                height: scrnHeight*.05,
+                child: Row(
+                  children: [
+                    Image.asset('assets/image/facebook_logo.png'),
+                    Image.asset('assets/image/linkedin.png'),
+                    Image.asset('assets/image/mail_logo.png'),
+                    Image.asset('assets/image/github_logo.png'),
+                  ],
+                ),
+              )
             ],
+
           ),),
           Expanded(
             child: Opacity(
                  opacity: .8,
                  child: Image.asset(
-                   "assets/image/profile_pic2.png",
+                   "assets/image/profile_pic.png",
                    fit: BoxFit.fill,
                  )),
           )

@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 class TextBttn extends StatefulWidget {
   var bttnPage;
   String bttnName;
@@ -24,8 +26,11 @@ class _TextBttnState extends State<TextBttn> {
         color: txtcolor,
         fontWeight: FontWeight.bold,
       ),),
-      onPressed: (){
-        Navigator.push(context, MaterialPageRoute(builder: (context)=>widget.bttnPage));
+      onPressed: (){ if(widget.bttnName != 'Contact Me')
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>widget.bttnPage));
+        else{
+          showCupertinoModalPopup(context: context, builder: (context)=>widget.bttnPage);
+      }
       },
     );
   }
